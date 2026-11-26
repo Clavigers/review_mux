@@ -17,6 +17,6 @@ still needs checking against the provider's own pages.
 
 Install links (GitHub App or Marketplace pages):
 
-- CodeRabbit: https://github.com/apps/coderabbitai
+- CodeRabbit: https://github.com/apps/coderabbitai (config: `.coderabbit.yaml`)
 - CodeAnt AI: https://github.com/marketplace/codeant-ai
 - Others: to be confirmed in the research pass.
