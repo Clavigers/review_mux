@@ -1,0 +1,17 @@
+# CodeRabbit: review only when someone comments "@coderabbitai review",
+# and post findings without the extras.
+reviews:
+  auto_review:
+    enabled: false
+  high_level_summary: false
+  poem: false
+  sequence_diagrams: false
+  collapse_walkthrough: true
+  changed_files_summary: false
+  review_status: false
+  related_issues: false
+  related_prs: false
+  suggested_labels: false
+  suggested_reviewers: false
+  in_progress_fortune: false
+  estimate_code_review_effort: false
