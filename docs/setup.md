@@ -27,10 +27,13 @@ taken from the provider's docs (see `providers-research.md`), not yet tried.
 1. Sign up at https://devlo.ai with GitHub. The free plan gives 500 credits a month,
    2 projects.
 2. Install the GitHub App https://github.com/apps/devloai on the repo.
-3. In the devlo dashboard, Automations → Code Reviewer → event triggers:
-   - **Delete** the "New pull request" trigger. While it exists, every push to an
-     open PR runs a review (we lost about 18 credits to this on the dry run).
-   - **Keep one** comment trigger, with **Value: `/devlo-review`**.
+3. **Required setting** (devlo has no repo config file; this is the only way to
+   control it): in the devlo dashboard go to **Automations → Code Reviewer →
+   Event Trigger**.
+   - **Delete** the "New pull request" event trigger. While it exists, every push
+     to an open PR runs a review (we lost about 18 credits to this on the dry run).
+   - Leave a **single** event trigger: a PR comment trigger with
+     **Value: `/devlo-review`**.
 4. Test: open a PR, push to it → devlo must stay silent. Then comment
    `/devlo-review` → devlo posts a review.
 
