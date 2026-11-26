@@ -12,6 +12,7 @@ devlo:
 ellipsis:
   login: ellipsis-dev[bot]
   trigger: /ellipsis-review  # planned; comment trigger not yet set up
-  trigger_as: clavigers      # GitHub org that holds the Ellipsis account
+  trigger_as: sadosystems    # admin of the clavigers org, which holds the Ellipsis account
+  repo: Clavigers/review_mux
   auto: false
   budget: {usd: 100, renews: false}  # one-time new-organization credit
