@@ -98,7 +98,11 @@ taken from the provider's docs (see `providers-research.md`), not yet tried.
   the dashboard offers one.
 - Bot login: `graphite-app[bot]`.
 
-## CodeReviewBot.AI: Signed up on kevkev, first review pending (PR #2)
+## CodeReviewBot.AI: Not working on kevkev (2026-11-26)
+
+**Result:** no comment, review or check of any kind on PR #2 or PR #3 (both opened
+by kevkev, a person; watched 10 minutes each). Not yet confirmed whether the app
+had access to `review_mux`. Don't set it up on sadosystems unless a retest works.
 
 **Trigger: none.** It reviews when a PR is opened.
 
