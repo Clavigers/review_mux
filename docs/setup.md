@@ -35,7 +35,9 @@ taken from the provider's docs (see `providers-research.md`), not yet tried.
    - Leave a **single** event trigger: a PR comment trigger with
      **Value: `/devlo-review`**.
 4. Test: open a PR, push to it → devlo must stay silent. Then comment
-   `/devlo-review` → devlo posts a review.
+   `/devlo-review` → devlo posts a review. **Passed on kevkev 2026-11-25:** no
+   review 3 minutes after a push, none on a newly opened PR (#2), and a review
+   within minutes of `/devlo-review` on #1.
 
 - Bot login: `devloai[bot]`. No repo config file; everything is in the dashboard.
 - Cost seen: about 6 credits per review on a small PR (~80 reviews from 482).
@@ -96,16 +98,30 @@ taken from the provider's docs (see `providers-research.md`), not yet tried.
   the dashboard offers one.
 - Bot login: `graphite-app[bot]`.
 
-## CodeReviewBot.AI: From docs
+## CodeReviewBot.AI: Signed up on kevkev, first review pending (PR #2)
 
 **Trigger: none.** It reviews when a PR is opened.
 
-1. Install https://github.com/apps/codereviewbot-ai. Free for public OSS repos.
+1. Sign up at https://codereviewbot.ai and install
+   https://github.com/apps/codereviewbot-ai. Free for public OSS repos.
+   - There is nothing to configure: no settings, no config file, and the model
+     isn't shown. After signup it just asks you to open a PR.
 2. Free accounts skip PRs opened by bots, so PRs must be opened by a person's
    account.
 - Can't be routed. Every PR gets reviewed, which is fine while it's free.
 - Bot login: `codereviewbot-ai[bot]`.
 
-## Ellipsis: skip
+## Ellipsis: $100 free credit for new organizations
 
-No free tier, trial or OSS program; prepaid credits only.
+Ellipsis's signup says new organizations get $100 of free credit, no card.
+Billing is prepaid credit plus compute and model tokens, so $100 is a one-time
+budget, not a monthly one.
+
+1. Sign up at https://ellipsis.dev and create an organization (check whether a
+   personal GitHub account counts, or whether it needs a GitHub organization).
+2. Install https://github.com/apps/ellipsis-dev.
+3. Code review is an agent defined in `.ellipsis/code-review.yaml` on the default
+   branch (`kind: code_review`). No comment command is documented; set up a PR
+   `on: [commented]` trigger so it only runs when asked, and give it a unique
+   command such as `/ellipsis-review`. To be confirmed on the dry run.
+- Bot login: `ellipsis-dev[bot]`.
