@@ -35,3 +35,14 @@ def test_devlo_real_comments_parse_and_dedupe():
     assert len(found) >= 2
     # devlo reviewed twice and repeated itself; at least one pair must collapse.
     assert any(overlaps(a, b) for i, a in enumerate(found) for b in found[i + 1:])
+
+
+def test_collect_keeps_known_bots_and_skips_replies():
+    from review_mux.collect import collect
+
+    comments = json.loads((FIXTURES / "devlo_pr1_comments.json").read_text())
+    human = dict(comments[0], user={"login": "someone"})
+    reply = dict(comments[0], in_reply_to_id=1)
+    found = collect(comments + [human, reply], {"devloai[bot]": "devlo"})
+    assert len(found) == len(comments)
+    assert {f.bot for f in found} == {"devlo"}
