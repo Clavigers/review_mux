@@ -8,3 +8,10 @@ devlo:
   auto: false              # "New pull request" trigger removed in the dashboard
   budget: {credits: 482, per_review_estimate: 6, renews: unknown}
   quota_reply: "devlo is paused for this organization because it is out of credits"
+
+ellipsis:
+  login: ellipsis-dev[bot]
+  trigger: /ellipsis-review  # planned; comment trigger not yet set up
+  trigger_as: clavigers      # GitHub org that holds the Ellipsis account
+  auto: false
+  budget: {usd: 100, renews: false}  # one-time new-organization credit

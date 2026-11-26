@@ -113,6 +113,10 @@ taken from the provider's docs (see `providers-research.md`), not yet tried.
 
 ## Ellipsis: $100 free credit for new organizations
 
+**Credit acquired 2026-11-25:** signed in to Ellipsis with the GitHub organization
+`clavigers` (an org, not a personal account) and got the $100 free credit. No card
+was needed. The install can only review repos owned by `clavigers`.
+
 Ellipsis's signup says new organizations get $100 of free credit, no card.
 Billing is prepaid credit plus compute and model tokens, so $100 is a one-time
 budget, not a monthly one.
