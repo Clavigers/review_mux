@@ -119,6 +119,17 @@ was needed. The install can only review repos owned by `clavigers`.
 Dry-run repo: https://github.com/Clavigers/review_mux (a copy of review_mux;
 `sadosystems` is an admin of `clavigers`, so it can post triggers there).
 
+**Model:** configured to use Claude Opus 5.5 (Ellipsis lets you pick the model,
+unlike CodeReviewBot). Opus is the most expensive option, so each review spends
+more of the $100; measure the cost per review before relying on it.
+
+**It can approve PRs.** Ellipsis can submit a real GitHub "Approve" review, not
+just comments. If branch protection requires an approving review, a bot approval
+may count toward it, letting a PR merge with no human review. Either turn
+approvals off in Ellipsis, or make sure branch protection doesn't count its
+approval (e.g. require review from code owners who are people). review_mux
+records a bot's approval as a signal only; it never counts toward merging.
+
 Ellipsis's signup says new organizations get $100 of free credit, no card.
 Billing is prepaid credit plus compute and model tokens, so $100 is a one-time
 budget, not a monthly one.
