@@ -20,3 +20,5 @@ Install links (GitHub App or Marketplace pages):
 - CodeRabbit: https://github.com/apps/coderabbitai
 - CodeAnt AI: https://github.com/marketplace/codeant-ai
 - Others: to be confirmed in the research pass.
+
+See [the setup steps](setup.md) for how each bot is installed and triggered.
